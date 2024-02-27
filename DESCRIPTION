@@ -1,0 +1,21 @@
+Package: chefCriteria
+Title: A collection of {chef} criterion functions
+Version: 0.0.1.9000
+Authors@R: 
+    c(person("MEWP (Matthew David Phelps)", , , "mewp@novonordisk.com", role = c("aut")),
+    person("NOSJ (Nicolai Skov Johnsen)",, , "nosj@novonordisk.com", role = c("aut")),
+    person("HSPU (Henrik Sparre Spiegelhauer)",, , "hspu@novonordisk.com", role = c("aut")),
+    person("CINO (Christian Haargaard Olsen)",, , "cino@novonordisk.com", role = c("aut", "cre")))
+Description: A collection of criterion functions for statistical evidence generation with {chef}.
+License: MIT + file LICENSE
+Encoding: UTF-8
+Roxygen: list(markdown = TRUE)
+RoxygenNote: 7.2.2
+Suggests: 
+    testthat (>= 3.0.0)
+Config/testthat/edition: 3
+Imports: 
+    chef,
+    data.table (>= 1.14.2),
+    magrittr,
+    pharmaverseadam
