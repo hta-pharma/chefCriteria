@@ -9,7 +9,7 @@ crit_ep_nsubev_01(
   event_index,
   subjectid_var,
   treatment_var,
-  n_subj_event_min = 10,
+  n_subj_event_min,
   ...
 )
 }
