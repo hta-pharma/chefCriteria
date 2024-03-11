@@ -15,6 +15,7 @@ n_sub <- function(dat,
 
   return(data.table(
     description = "Number of subjects",
+    qualifiers = NA_character_,
     label = "N",
     value = stat
   ))
@@ -35,6 +36,7 @@ n_subev <- function(dat,
 
   return(data.table(
     description = "Number of subjects with events",
+    qualifiers = NA_character_,
     label = "n",
     value = stat
   ))
@@ -58,6 +60,7 @@ p_subev <- function(dat,
 
   out <-
     data.table(description = "Proportion of subjects with events",
+               qualifiers = NA_character_,
                label = "(%)",
                value = n_subev / n_sub * 100)
 
@@ -101,6 +104,7 @@ summary_stats <- function(dat,
 
   return(data.table(
     description = "Summary statistics",
+    qualifiers = NA_character_,
     label = names(stat),
     value = as.list(stat)
   ))
@@ -126,12 +130,10 @@ n_subev_trt_diff <- function(dat,
   # In case stat is invalid, e.g. if obs. only exists in one treatment arm then replace stat with NA
   stat <- ifelse(length(stat) == 0, NA, stat)
 
-  out <-
-
-    data.table(description = "Absolute difference in number of subjects with events between treatment arms",
-               label = "n_trt_diff",
-               value = stat)
-
+  out <-  data.table(description = "Absolute difference in number of subjects with events between treatment arms",
+                      qualifiers = NA_character_,
+                      label = "n_trt_diff",
+                      value = stat)
 
   return(out)
 }
@@ -157,6 +159,7 @@ contingency2x2_ptest <- function(dat,
   # Prepare output
   out = data.table::data.table(
     description = "Fisher's exact test for count data",
+    qualifiers = NA_character_,
     label = c("Pval_independency", "CI_upper", "CI_lower"),
     value = c(res$p.value, res$conf.int[1], res$conf.int[2])
   )
@@ -189,6 +192,7 @@ contingency2x2_strata_test <- function(dat,
   # Prepare output
   out <- data.table::data.table(
     description = "Cochran-mante-haenszel test for odds ratios across strata",
+    qualifiers = NA_character_,
     label = c("Pval_independency", "CI_lower", "CI_upper"),
     value = c(res$p.value, res$conf.int[[1]], res$conf.int[[2]])
 

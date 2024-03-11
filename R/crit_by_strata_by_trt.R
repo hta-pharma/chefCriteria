@@ -17,7 +17,7 @@
 crit_bb_nsubev_01 <- function(dat, event_index, subjectid_var, n_subj_event_min, ...){
 
   # Evaluate criterion
-  crit_accept <- dat[J(event_index)] |>
+  crit_accept <- dat[list(event_index)] |>
     unique(by = c(subjectid_var)) |>
     nrow() >= n_subj_event_min
 

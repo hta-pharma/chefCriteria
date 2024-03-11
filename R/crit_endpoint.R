@@ -19,9 +19,9 @@ crit_ep_nsubev_01 <- function(dat,
                               event_index,
                               subjectid_var,
                               treatment_var,
-                              n_subj_event_min = 10,
+                              n_subj_event_min,
                               ...) {
-  stat <- dat[J(event_index)] |>
+  stat <- dat[list(event_index)] |>
     unique(by = c(subjectid_var, treatment_var))
 
   return(any(table(stat[[treatment_var]]) >= n_subj_event_min))

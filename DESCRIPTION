@@ -10,7 +10,7 @@ Description: A collection of criterion functions for statistical evidence genera
 License: MIT + file LICENSE
 Encoding: UTF-8
 Roxygen: list(markdown = TRUE)
-RoxygenNote: 7.2.2
+RoxygenNote: 7.3.1
 Config/testthat/edition: 3
 Imports: 
     chef,
@@ -21,10 +21,10 @@ Imports:
     dplyr,
     knitr
 Suggests: 
-    testthat (>= 3.0.0)
+    testthat (>= 3.0.0),
     pharmaverseadam
 Remotes:
-    hta-pharma/chefStats
+    hta-pharma/chefStats,
     hta-pharma/chef
 VignetteBuilder: 
     knitr
