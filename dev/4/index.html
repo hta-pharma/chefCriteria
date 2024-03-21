@@ -59,25 +59,7 @@
 <div class="section level1">
 <h1 id="developer-setup">Developer Setup<a class="anchor" aria-label="anchor" href="#developer-setup"></a>
 </h1>
-<div class="section level2">
-<h2 id="install-githooks">Install githooks<a class="anchor" aria-label="anchor" href="#install-githooks"></a>
-</h2>
-<p>This project supports two styles of githooks.</p>
-<ol style="list-style-type: decimal">
-<li>The first style is to use the githooks provided in the <code>.githooks</code> directory. To use these hooks, run the following command in the root of the project:</li>
-</ol>
-<ul>
-<li>These hooks are very simple just blocking the commit to protected branches. `` git config –local core.hooksPath .githooks/</li>
-</ul>
-<!-- --><div class="sourceCode" id="cb1"><pre class="sourceCode R"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" tabindex="-1"></a><span class="fl">2.</span> The second is to install the precommit <span class="fu">tool</span> (<span class="cf">for</span> linux) [precommit](https<span class="sc">:</span><span class="er">//</span>pre<span class="sc">-</span>commit.com<span class="sc">/</span>). </span>
-<span id="cb1-2"><a href="#cb1-2" tabindex="-1"></a>  <span class="sc">-</span> These are much more powerful and can be used to run checks on the code before it is committed.</span></code></pre></div>
-<p>pipx install pre-commit # use pipx to avoid polluting your global python environment # pip install pre-commit # if you don’t want to use pipx</p>
-</div>
-</div>
-<div class="section level1">
-<h1 id="then-run-in-the-root-of-repo">Then run in the root of repo:<a class="anchor" aria-label="anchor" href="#then-run-in-the-root-of-repo"></a>
-</h1>
-<p>pre-commit install # Will take 2-3 minutes to run #pre-commit run –all #Optionally run all checks over all files ```</p>
+<p>Please refer to the guidelines described in the ecosystem wrapper package {ramnog}. <a href="https://hta-pharma.github.io/ramnog/articles/#:~:text=Debugging-,Development,-Git%20Workflow" class="external-link">Developper Documentation</a></p>
 </div>
 
   </main><aside class="col-md-3"><div class="license">
