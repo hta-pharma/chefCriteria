@@ -28,3 +28,4 @@ Remotes:
     hta-pharma/chef
 VignetteBuilder: 
     knitr
+URL: https://hta-pharma.github.io/chefCriteria/
