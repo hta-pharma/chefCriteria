@@ -2,7 +2,7 @@
 <!-- Insert badges here -->
 <!-- README.md is generated from README.Rmd. Please edit that file -->
 
-# Library of criteria functions for chef-style AMNOG analyses
+# A library of criteria functions for chef-style AMNOG analyses <img src="man/figures/logo.png" align="right" height="138" alt="" />
 
 The chefCriteria package aims to provide a library of inclusion criteria
 functions for use in AMNOG analyses created by the chef package.
