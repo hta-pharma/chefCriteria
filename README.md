@@ -14,5 +14,5 @@ As the functions found in {chefCriteria} are designed to be used with
 # Developer Setup
 
 Please refer to the guidelines described in the ecosystem wrapper
-package {ramnog}. [Developer
-Documentation](https://hta-pharma.github.io/ramnog/articles/#:~:text=Debugging-,Development,-Git%20Workflow)
+package {ramnog} for [developer
+documentation](https://hta-pharma.github.io/ramnog/articles/#:~:text=Debugging-,Development,-Git%20Workflow)
