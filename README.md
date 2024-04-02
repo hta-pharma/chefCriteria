@@ -15,4 +15,4 @@ As the functions found in {chefCriteria} are designed to be used with
 
 Please refer to the guidelines described in the ecosystem wrapper
 package {ramnog} for [developer
-documentation](https://hta-pharma.github.io/ramnog/articles/#:~:text=Debugging-,Development,-Git%20Workflow)
+documentation](https://hta-pharma.github.io/ramnog/articles/#:~:text=Debugging-,Development,-Git%20Workflow).
