@@ -25,3 +25,14 @@ A Boolean value indicating whether the criterion is met.
 \description{
 This function checks if the number of subjects with events in the total population is greater than or equal to a specified minimum.
 }
+\examples{
+dat <- data.table::data.table(USUBJID = c("S1", "S2", "S3", "S4"))
+dat[, INDEX_ := .I]
+data.table::setkey(dat, INDEX_)
+# Returns TRUE: 2 subjects with events >= minimum of 2
+crit_bb_nsubev_01(dat, event_index = c(1L, 2L),
+                  subjectid_var = "USUBJID", n_subj_event_min = 2L)
+# Returns FALSE: 1 subject with events < minimum of 2
+crit_bb_nsubev_01(dat, event_index = c(1L),
+                  subjectid_var = "USUBJID", n_subj_event_min = 2L)
+}

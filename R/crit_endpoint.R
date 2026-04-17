@@ -15,6 +15,17 @@
 #' @return A Boolean value indicating whether the criterion is met.
 #' @import data.table
 #' @export
+#' @examples
+#' dat <- data.table::data.table(
+#'   USUBJID = c("S1", "S2", "S3", "S4"),
+#'   TRT     = c("Active", "Active", "Placebo", "Placebo")
+#' )
+#' dat[, INDEX_ := .I]
+#' data.table::setkey(dat, INDEX_)
+#' # Returns TRUE: Active arm has 2 subjects with events >= minimum of 2
+#' crit_ep_nsubev_01(dat, event_index = c(1L, 2L),
+#'                   subjectid_var = "USUBJID",
+#'                   treatment_var = "TRT", n_subj_event_min = 2L)
 crit_ep_nsubev_01 <- function(dat,
                               event_index,
                               subjectid_var,
