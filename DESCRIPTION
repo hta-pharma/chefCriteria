@@ -1,33 +1,34 @@
 Package: chefCriteria
-Title: A collection of {chef} criterion functions
-Version: 0.0.1.9000
-Authors@R: 
+Title: A Collection of 'chef' Criterion Functions
+Version: 0.1.0
+Authors@R:
     c(person("MEWP (Matthew David Phelps)", , , "mewp@novonordisk.com", role = c("aut")),
     person("NOSJ (Nicolai Skov Johnsen)",, , "nosj@novonordisk.com", role = c("aut")),
     person("HSPU (Henrik Sparre Spiegelhauer)",, , "hspu@novonordisk.com", role = c("aut")),
     person("CINO (Christian Haargaard Olsen)",, , "cino@novonordisk.com", role = c("aut", "cre")))
-Description: A collection of criterion functions for statistical evidence generation with {chef}.
+Description: Provides a collection of criterion functions for use with the 'chef'
+    pipeline framework for clinical trial evidence generation. Criterion functions
+    determine whether a statistical analysis should be included in the final output
+    based on conditions such as minimum subject counts or p-value thresholds.
+    Designed for use in healthcare technology assessments such as AMNOG dossier
+    submissions.
 License: MIT + file LICENSE
+BugReports: https://github.com/hta-pharma/chefCriteria/issues
 Encoding: UTF-8
 Roxygen: list(markdown = TRUE)
 RoxygenNote: 7.3.1
 Config/testthat/edition: 3
-Imports: 
-    chef,
-    chefStats,
-    data.table (>= 1.14.2),
-    magrittr,
-    purrr,
-    dplyr,
-    knitr
-Suggests: 
-    testthat (>= 3.0.0),
-    pharmaverseadam
 Remotes:
-    hta-pharma/chefStats,
-    hta-pharma/chef
-VignetteBuilder: 
-    knitr
-URL: 
-    https://hta-pharma.github.io/chefCriteria/,
-    https://app.codecov.io/gh/hta-pharma/chefCriteria
+    hta-pharma/chef@feature/CRAN_submission,
+    hta-pharma/chefStats@feature/CRAN_submission
+Imports:
+    chefStats,
+    data.table (>= 1.14.2)
+Suggests:
+    chef,
+    testthat (>= 3.0.0),
+    pharmaverseadam,
+    dplyr,
+    purrr
+URL: https://hta-pharma.github.io/chefCriteria/,
+    https://github.com/hta-pharma/chefCriteria

@@ -6,3 +6,8 @@ README.html
 ^docs$
 ^pkgdown$
 ^\.github$
+^\.pre-commit-config\.yaml$
+^\.githooks$
+^README\.rmd$
+^tools$
+^cran-plan\.md$

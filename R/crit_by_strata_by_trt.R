@@ -14,6 +14,16 @@
 #' @return A Boolean value indicating whether the criterion is met.
 #' @export
 #' @import data.table
+#' @examples
+#' dat <- data.table::data.table(USUBJID = c("S1", "S2", "S3", "S4"))
+#' dat[, INDEX_ := .I]
+#' data.table::setkey(dat, INDEX_)
+#' # Returns TRUE: 2 subjects with events >= minimum of 2
+#' crit_bb_nsubev_01(dat, event_index = c(1L, 2L),
+#'                   subjectid_var = "USUBJID", n_subj_event_min = 2L)
+#' # Returns FALSE: 1 subject with events < minimum of 2
+#' crit_bb_nsubev_01(dat, event_index = c(1L),
+#'                   subjectid_var = "USUBJID", n_subj_event_min = 2L)
 crit_bb_nsubev_01 <- function(dat, event_index, subjectid_var, n_subj_event_min, ...){
 
   # Evaluate criterion
@@ -35,7 +45,7 @@ crit_bb_nsubev_01 <- function(dat, event_index, subjectid_var, n_subj_event_min,
 #'   `dat`.
 #' @param cell_index A vector of integers referencing the rows of `dat` (as
 #'   specified by the `INDEX_` column in `dat`) that match the population to be
-#'   analyzed. See the "Endpoint Events" vignette in {ramnog}
+#'   analyzed. See the "Endpoint Events" vignette in \pkg{ramnog}
 #'   for more information.
 #' @param treatment_var character. The name of the treatment variable in `dat`.
 #' @param treatment_refval character. The reference value of the treatment variable in `dat`.
@@ -45,6 +55,17 @@ crit_bb_nsubev_01 <- function(dat, event_index, subjectid_var, n_subj_event_min,
 #'
 #' @return A Boolean value indicating whether the criterion is met.
 #' @export
+#' @examples
+#' dat <- data.table::data.table(
+#'   USUBJID = c("S1", "S2", "S3", "S4", "S5", "S6"),
+#'   TRT     = c("Active", "Active", "Active", "Placebo", "Placebo", "Placebo")
+#' )
+#' dat[, INDEX_ := .I]
+#' data.table::setkey(dat, INDEX_)
+#' crit_bb_pval_01(dat, event_index = c(1L, 2L, 4L),
+#'                 cell_index = dat[["INDEX_"]],
+#'                 treatment_var = "TRT", treatment_refval = "Placebo",
+#'                 subjectid_var = "USUBJID", pval_max = 0.05)
 crit_bb_pval_01 <-
   function(dat,
            event_index,

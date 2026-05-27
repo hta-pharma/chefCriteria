@@ -24,7 +24,7 @@ the definition of an 'event'. Matching is done via the \code{INDEX_} column in
 
 \item{cell_index}{A vector of integers referencing the rows of \code{dat} (as
 specified by the \code{INDEX_} column in \code{dat}) that match the population to be
-analyzed. See the "Endpoint Events" vignette in {ramnog}
+analyzed. See the "Endpoint Events" vignette in \pkg{ramnog}
 for more information.}
 
 \item{treatment_var}{character. The name of the treatment variable in \code{dat}.}
@@ -42,4 +42,16 @@ A Boolean value indicating whether the criterion is met.
 }
 \description{
 This function checks if the p-value in the total population is below a specified maximum.
+}
+\examples{
+dat <- data.table::data.table(
+  USUBJID = c("S1", "S2", "S3", "S4", "S5", "S6"),
+  TRT     = c("Active", "Active", "Active", "Placebo", "Placebo", "Placebo")
+)
+dat[, INDEX_ := .I]
+data.table::setkey(dat, INDEX_)
+crit_bb_pval_01(dat, event_index = c(1L, 2L, 4L),
+                cell_index = dat[["INDEX_"]],
+                treatment_var = "TRT", treatment_refval = "Placebo",
+                subjectid_var = "USUBJID", pval_max = 0.05)
 }
