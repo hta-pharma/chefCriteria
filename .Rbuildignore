@@ -9,3 +9,5 @@ README.html
 ^\.pre-commit-config\.yaml$
 ^\.githooks$
 ^README\.rmd$
+^tools$
+^cran-plan\.md$
